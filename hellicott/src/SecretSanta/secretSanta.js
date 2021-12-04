@@ -5,7 +5,6 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import InputSecretSantas from './inputSecretSantas';
 
 const steps = ['Enter participants', 'Confirm', 'Send secret santa emails!'];
 
@@ -23,12 +22,6 @@ export default function SecretSanta() {
   const handleReset = () => {
     setActiveStep(0);
   };
-
-  const getStep = (step) => {
-        if (step === 0) {
-            return <InputSecretSantas />
-        }
-  }
 
   return ( 
     <Box sx={{ width: '80%' , padding: 8}}>
