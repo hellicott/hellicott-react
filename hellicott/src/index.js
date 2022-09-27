@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import SecretSanta from './SecretSanta/secretSanta';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <SecretSanta />
   </React.StrictMode>,
   document.getElementById('root')
 );
