@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 
 function RandomColour() {
-  const [colour, setColour] = useState("#00FF00");
+  const [colour, setColour] = useState("#5e5e74");
 
   return (
     <div id="colourGenerator" className="App">
