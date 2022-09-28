@@ -1,9 +1,12 @@
 import './App.css';
+import React, { useState } from 'react';
 
 function RandomColour() {
+  const [colour, setColour] = useState("#00FF00");
+
   return (
     <div id="colourGenerator" className="App">
-      <header className="App-section">
+      <header className="App-section" style={{backgroundColor: colour}}>
         <form onSubmit={handleSubmit}>
           <p>
             Get a new randomly generated colour by clicking the button below
@@ -21,11 +24,7 @@ function RandomColour() {
 
     console.log(randomColor);
 
-    const colourGenDiv = document.getElementById("colourGenerator");
-
-    colourGenDiv.style.backgroundColor = randomColor;
-
-    console.log(colourGenDiv);
+    setColour(randomColor);
 
   }
 
