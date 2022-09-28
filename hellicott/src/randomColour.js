@@ -12,6 +12,7 @@ function RandomColour() {
             Get a new randomly generated colour by clicking the button below
           </p>
           <button type="submit">New Colour</button>
+          <p>{colour}</p>
         </form>
       </header>
     </div>
@@ -21,8 +22,6 @@ function RandomColour() {
     e.preventDefault();
 
     const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-
-    console.log(randomColor);
 
     setColour(randomColor);
 
