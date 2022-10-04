@@ -17,7 +17,9 @@ function RandomColour() {
           <button className='subtle-button' style={{color: colour}} onClick={handleSubmit}>New Colour</button>
           <p>
             <span style={{padding: 8}}>{colour}</span>
-            <button className='subtle-button' onClick={copyHexColour}><FontAwesomeIcon icon={faCopy} /></button>
+            <button className='subtle-button tooltip' onClick={copyHexColour}><FontAwesomeIcon icon={faCopy} />
+            <span className="tooltiptext">copy hex colour to clipboard</span>
+            </button>
           </p>
           
         </div>
