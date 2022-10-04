@@ -9,8 +9,9 @@ import { faHandScissors } from '@fortawesome/free-solid-svg-icons'
 
 
 function RockPaperScissors() {
-  const [botChoice, setBotChoice] = useState(faQuestion);
-  const [playerChoice, setPlayerChoice] = useState(faQuestion);
+  const [botChoice, setBotChoice] = useState(-1);
+  const [playerChoice, setPlayerChoice] = useState(-1);
+  const [winner, setWinner] = useState("Who will win?");
 
   return (
     <div id="rockpaperscissors" className="App">
@@ -19,50 +20,85 @@ function RockPaperScissors() {
         <div className="row">
           <div className="column darker-section">
             <p>Bot</p>
-            <FontAwesomeIcon icon={botChoice} />
+            <FontAwesomeIcon icon={getSymbol(botChoice)} />
+            <p><button hidden id='playButton' className='subtle-button' onClick={selectBotChoice}>Play!</button></p>
           </div>
           <div className="column lighter-section">
             <p>Player</p>
-            <FontAwesomeIcon icon={playerChoice} />
+            <FontAwesomeIcon icon={getSymbol(playerChoice)} />
             <p>
-              <button className='subtle-button' onClick={updatePlayerRock}><FontAwesomeIcon icon={faHandBackFist} /></button>
-              <button className='subtle-button' onClick={updatePlayerPaper}><FontAwesomeIcon icon={faHand} /></button>
-              <button className='subtle-button' onClick={updatePlayerScissors}><FontAwesomeIcon icon={faHandScissors} /></button>
+              <button className='subtle-button' onClick={updatePlayerRock}><FontAwesomeIcon icon={getSymbol(0)} /></button>
+              <button className='subtle-button' onClick={updatePlayerPaper}><FontAwesomeIcon icon={getSymbol(1)} /></button>
+              <button className='subtle-button' onClick={updatePlayerScissors}><FontAwesomeIcon icon={getSymbol(2)} /></button>
             </p>
           </div>
         </div>
-        <p id='rpsResult'>Who will win?</p>
+        <p>{winner}</p>
       </header>
     </div>
   );
 
   function updatePlayerRock() {
-    setPlayerChoice(faHandBackFist);
+    setPlayerChoice(0);
+    document.getElementById('playButton').removeAttribute("hidden");
   }
   function updatePlayerPaper() {
-    setPlayerChoice(faHand);
+    setPlayerChoice(1);
+    document.getElementById('playButton').removeAttribute("hidden");
   }
   function updatePlayerScissors() {
-    setPlayerChoice(faHandScissors);
+    setPlayerChoice(2);
+    document.getElementById('playButton').removeAttribute("hidden");
   }
-  function getSymbol(num) {
-    if (num === 0){
-      console.log(num);
-      return {faHandBackFist}.faHandBackFist;
-    }
-    if (num === 1){
-      console.log(num);
 
+  function selectBotChoice(){
+    document.getElementById('playButton').setAttribute("hidden", "true");
+    const randomNum = Math.floor(Math.random()*3);
+    setBotChoice(randomNum);
+    checkWin();
+  }
+
+  function getSymbol(num) {
+    if (num === -1){
+      return faQuestion;
+    }
+
+    if (num === 0){
+      return faHandBackFist;
+    }
+
+    if (num === 1){
       return faHand;
     }
-    if (num === 2){      
-      console.log(num);
 
+    if (num === 2){
       return faHandScissors;
     }
   }
 
+  function checkWin() {
+    console.log(botChoice + ", " + playerChoice);
+    if (botChoice === playerChoice) {
+      setWinner("It's a draw!");
+    }
+    else if (botChoice === 0) {
+      (playerChoice === 1) ? playerWins() : playerLoses();
+    }
+    else if (botChoice === 1) {
+      (playerChoice === 2) ? playerWins() : playerLoses();
+    }
+    else if (botChoice === 2) {
+      (playerChoice === 0) ? playerWins() : playerLoses();
+    }
+  }
 
+  function playerWins() {
+    setWinner("You beat the bot!");
+  }
+
+  function playerLoses() {
+    setWinner("You lost :(");
+  }
 }
 
 
