@@ -38,6 +38,34 @@
   color: #61dafb;
 }
 
+
+.inner-app-section {
+  background-color: rgb(255, 255, 255, 0.5);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 5px;
+}
+
+button.subtle-button {
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: calc(10px + 2vmin);
+  border-width: 0px;
+}
+
+button:hover.subtle-button {
+  background-color: rgb(255, 255, 255, 0.8);
+
+}
+
+button:active.subtle-button {
+  background-color: rgb(255, 255, 255, 0.6);
+
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
