@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header darker-section">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           The Hellicott website, reimagined in React...

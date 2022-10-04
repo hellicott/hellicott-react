@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import RandomColour from './randomColour';
+import RockPaperScissors from './rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <RandomColour />
+    <RandomColour />
+    <RockPaperScissors />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -9,7 +9,7 @@ function RandomColour() {
 
   return (
     <div id="colourGenerator" className="App">
-      <header className="App-section" style={{backgroundColor: colour}}>
+      <header className="App-section lighter-section">
         <div className='inner-app-section'>
           <p>
             Get a new randomly generated colour by clicking the button below

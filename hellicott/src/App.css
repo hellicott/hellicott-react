@@ -13,15 +13,23 @@
   }
 }
 
-.App-header {
+.darker-section {
   background-color: #282c34;
+  color: white;
+}
+
+.lighter-section {
+  background-color: #5e5e74;
+  color: black;
+}
+
+.App-header {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-section {
@@ -31,7 +39,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
 }
 
 .App-link {
@@ -54,6 +61,7 @@ button.subtle-button {
   border-radius: 5px;
   font-size: calc(10px + 2vmin);
   border-width: 0px;
+  margin: 8px;
 }
 
 button:hover.subtle-button {
@@ -64,6 +72,20 @@ button:hover.subtle-button {
 button:active.subtle-button {
   background-color: rgb(255, 255, 255, 0.6);
 
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 @keyframes App-logo-spin {
