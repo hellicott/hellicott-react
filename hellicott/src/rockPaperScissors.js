@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { faHandBackFist } from '@fortawesome/free-solid-svg-icons'
@@ -9,9 +9,13 @@ import { faHandScissors } from '@fortawesome/free-solid-svg-icons'
 
 
 function RockPaperScissors() {
-  const [botChoice, setBotChoice] = useState(-1);
-  const [playerChoice, setPlayerChoice] = useState(-1);
   const [winner, setWinner] = useState("Who will win?");
+  const [playerChoice, setPlayerChoice] = useState(-1);
+  const [botChoice, setBotChoice] = useState(-1);
+  useEffect(() => {
+    checkWin(); // This is be executed when `loading` state changes
+  }, [botChoice, checkWin])
+
 
   return (
     <div id="rockpaperscissors" className="App">
@@ -21,7 +25,11 @@ function RockPaperScissors() {
           <div className="column darker-section">
             <p>Bot</p>
             <FontAwesomeIcon icon={getSymbol(botChoice)} />
-            <p><button hidden id='playButton' className='subtle-button' onClick={selectBotChoice}>Play!</button></p>
+            <p>
+              {playerChoice !== -1 
+              ? <button id='playButton' className='subtle-button' onClick={selectBotChoice}>Play!</button>
+              : ""}
+            </p>
           </div>
           <div className="column lighter-section">
             <p>Player</p>
@@ -40,22 +48,20 @@ function RockPaperScissors() {
 
   function updatePlayerRock() {
     setPlayerChoice(0);
-    document.getElementById('playButton').removeAttribute("hidden");
   }
   function updatePlayerPaper() {
     setPlayerChoice(1);
-    document.getElementById('playButton').removeAttribute("hidden");
   }
   function updatePlayerScissors() {
     setPlayerChoice(2);
-    document.getElementById('playButton').removeAttribute("hidden");
   }
 
   function selectBotChoice(){
-    document.getElementById('playButton').setAttribute("hidden", "true");
+    // document.getElementById('playButton').setAttribute("hidden", "true");
     const randomNum = Math.floor(Math.random()*3);
+
     setBotChoice(randomNum);
-    checkWin();
+
   }
 
   function getSymbol(num) {
