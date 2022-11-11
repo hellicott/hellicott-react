@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Hangman from './projects/hangman';
 import RandomColour from './projects/randomColour';
 import RockPaperScissors from './projects/rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
@@ -13,7 +12,6 @@ ReactDOM.render(
     <RandomColour />
     <RandomColour />
     <RockPaperScissors />
-    <Hangman />
   </React.StrictMode>,
   document.getElementById('root')
 );

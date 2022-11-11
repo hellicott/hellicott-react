@@ -1,5 +1,5 @@
 import '../App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { faHandBackFist } from '@fortawesome/free-solid-svg-icons'
@@ -9,13 +9,8 @@ import { faHandScissors } from '@fortawesome/free-solid-svg-icons'
 
 
 function RockPaperScissors() {
-  const [winner, setWinner] = useState("Who will win?");
   const [playerChoice, setPlayerChoice] = useState(-1);
   const [botChoice, setBotChoice] = useState(-1);
-  useEffect(() => {
-    checkWin(); // This is be executed when `loading` state changes
-  }, [botChoice, checkWin])
-
 
   return (
     <div id="rockpaperscissors" className="App">
@@ -25,11 +20,7 @@ function RockPaperScissors() {
           <div className="column darker-section">
             <p>Bot</p>
             <FontAwesomeIcon icon={getSymbol(botChoice)} />
-            <p>
-              {playerChoice !== -1 
-              ? <button id='playButton' className='subtle-button' onClick={selectBotChoice}>Play!</button>
-              : ""}
-            </p>
+            
           </div>
           <div className="column lighter-section">
             <p>Player</p>
@@ -41,7 +32,11 @@ function RockPaperScissors() {
             </p>
           </div>
         </div>
-        <p>{winner}</p>
+        <p>
+          {playerChoice !== -1 
+          ? <button id='playButton' className='subtle-button' onClick={selectBotChoice}>Play!</button>
+          : ""}
+        </p>
       </header>
     </div>
   );
@@ -57,7 +52,6 @@ function RockPaperScissors() {
   }
 
   function selectBotChoice(){
-    // document.getElementById('playButton').setAttribute("hidden", "true");
     const randomNum = Math.floor(Math.random()*3);
 
     setBotChoice(randomNum);
@@ -82,31 +76,7 @@ function RockPaperScissors() {
     }
   }
 
-  function checkWin() {
-    console.log(botChoice + ", " + playerChoice);
-    if (botChoice === playerChoice) {
-      setWinner("It's a draw!");
-    }
-    else if (botChoice === 0) {
-      (playerChoice === 1) ? playerWins() : playerLoses();
-    }
-    else if (botChoice === 1) {
-      (playerChoice === 2) ? playerWins() : playerLoses();
-    }
-    else if (botChoice === 2) {
-      (playerChoice === 0) ? playerWins() : playerLoses();
-    }
-  }
-
-  function playerWins() {
-    setWinner("You beat the bot!");
-  }
-
-  function playerLoses() {
-    setWinner("You lost :(");
-  }
 }
-
 
 
 export default RockPaperScissors;
