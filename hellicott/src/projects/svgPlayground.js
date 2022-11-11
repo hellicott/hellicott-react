@@ -1,6 +1,6 @@
 import '../App.css';
 import React, { useState } from 'react';
-import Mountains from '..\\svgs\\mountain.js'
+import Mountains from '../svgs/mountain.js'
 
 function SvgPlayground() {
     const [mountainColour, setMountainColour] = useState("#00ff00");
