@@ -74,6 +74,12 @@ button:active.subtle-button {
 
 }
 
+.thin-section {
+  width: 50%;
+  justify-content: center;
+
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -89,6 +95,26 @@ button:active.subtle-button {
   align-items: center;
   justify-content: center;
 }
+
+.column-stack {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: right;
+  justify-content: right;
+}
+
+.row-stack {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+}
+
 
 /* Tooltip container */
 .tooltip {
