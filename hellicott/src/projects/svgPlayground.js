@@ -1,35 +1,30 @@
 import '../App.css';
 import React, { useState } from 'react';
-import Mountains from '../svgs/mountain.js'
+import Mountains from '../svgs/mountain.js';
+import { CompactPicker } from 'react-color';
+
 
 function SvgPlayground() {
-    const [mountainColour, setMountainColour] = useState("#00ff00");
-    const [moonColour, setMoonColour] = useState("#ffff00");
+    // const [background, setBackground] = useState("#9199c1");
+    const [background, setBackground] = useState({hex: "#9199c1"});
+
+    const handleBackgroundChange = (background) => setBackground(background);
+    const [foreground, setForeground] = useState({hex: "#5e5e74"});
+    const handleForegroundChange = (foreground) => setForeground(foreground);
 
     return (
         <div id="svgPlayground" className="App">
-            <form onSubmit={handleColourChange}>
-                <label>
-                    Mountain Hex Colour
-                    <input type="text" name="mountainHex" />
-                </label>
-                <label>
-                    Circle Hex Colour
-                    <input type="text" name="moonHex" />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
             <div>
-                <Mountains moon={moonColour} mountains={mountainColour} />
+                <p>Mountains</p>
+                <CompactPicker color={foreground} onChangeComplete={handleForegroundChange} />
+                <p>Circle</p>
+                <CompactPicker color={background} onChangeComplete={handleBackgroundChange} />
+            </div>
+            <div>
+                <Mountains moon={background.hex} mountains={foreground.hex} />
             </div>
         </div>
-      );
-
-      function handleColourChange(event) {
-        event.preventDefault();
-        setMountainColour(event.target.mountainHex.value);
-        setMoonColour(event.target.moonHex.value);
-      }
+    );
 
 }
 
