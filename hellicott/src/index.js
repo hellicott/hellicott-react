@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import HellicottHeader from './components/hellicottHeader';
 import SvgDino from './projects/svgDino';
 import RandomColour from './projects/randomColour';
 import RockPaperScissors from './projects/rockPaperScissors';
@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HellicottHeader />
     <SvgDino />
     <RandomColour />
     <RandomColour />

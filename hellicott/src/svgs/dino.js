@@ -34,7 +34,7 @@ function Dino(props) {
                         <circle cx="-38.609" cy="31.443" r=".27263"/>
                         <circle cx="-41.621" cy="31.054" r=".27263"/>
                     </g>
-                    <path d="m-41.803 32.793c0.14249 1.1617 1.7619 1.0956 1.8175 0.25964" fill="none" stroke="#000" stroke-width=".26458px"/>
+                    <path d="m-41.803 32.793c0.14249 1.1617 1.7619 1.0956 1.8175 0.25964" fill="none" stroke="#000" strokeWidth=".26458px"/>
                 </g>
             </g>
         </svg>
