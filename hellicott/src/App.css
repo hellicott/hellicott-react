@@ -2,9 +2,8 @@
   text-align: center;
 }
 
-.padded-section {
+.header-section {
   padding: 15px;
-  margin-bottom: 10px;
   border-bottom: #000;
   border-bottom-style: ridge;
   border-bottom-width: medium;
@@ -48,6 +47,12 @@ a:hover.subtle-button {
 a:active.subtle-button {
   background-color: rgb(153, 153, 153);
 
+}
+
+.project-title {
+  padding: 1px;
+  margin-bottom: 10px;  
+  background-color: rgb(223, 182, 227);
 }
 
 .row {

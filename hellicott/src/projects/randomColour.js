@@ -8,9 +8,11 @@ function RandomColour() {
   const [colour, setColour] = useState("#5e5e74");
 
   return (
-    <div id="colourGenerator" className="App">
-      <header className="App-section" style={{backgroundColor:colour}}>
-        <div className='inner-app-section'>
+    <div id="colourGenerator" className="App">            
+    <div className='project-title'>
+      <h1>Random Colour Generator</h1>
+    </div>
+        <div className='inner-app-section' style={{backgroundColor:colour}}>
           <p>
             Get a new randomly generated colour by clicking the button below
           </p>
@@ -23,7 +25,6 @@ function RandomColour() {
           </p>
           
         </div>
-      </header>
     </div>
   );
 

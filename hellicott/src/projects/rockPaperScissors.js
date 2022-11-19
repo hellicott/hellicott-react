@@ -14,8 +14,9 @@ function RockPaperScissors() {
 
   return (
     <div id="rockpaperscissors" className="App">
-      <header className="App-section darker-section">
-        <p>Rock Paper Scissors!</p>
+      <div className='project-title'>
+        <h1>Rock Paper Scissors</h1>
+      </div>
         <div className="row">
           <div className="column darker-section">
             <p>Bot</p>
@@ -37,7 +38,6 @@ function RockPaperScissors() {
           ? <button id='playButton' className='subtle-button' onClick={selectBotChoice}>Play!</button>
           : ""}
         </p>
-      </header>
     </div>
   );
 

@@ -11,7 +11,7 @@ const HellicottHeader = (props) => {
   const gitSymbol = "#000";
 
   return ( 
-    <div className='padded-section'>
+    <div className='header-section'>
       <div className="header-branding">
         <HellicottLogo size="50" hexagonColour={hexagon} mountainColour={mountains} gitColour={gitSymbol} />
         <h1>Hellicott</h1>
