@@ -6,10 +6,12 @@ import SvgDino from './projects/svgDino';
 import RandomColour from './projects/randomColour';
 import RockPaperScissors from './projects/rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
+import BowlingScoreCalculator from './projects/bowlingScore';
 
 ReactDOM.render(
   <React.StrictMode>
     <HellicottHeader />
+    <BowlingScoreCalculator />
     <SvgDino />
     <RandomColour />
     <RandomColour />
