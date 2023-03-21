@@ -13,6 +13,9 @@ Output: 120
 3. Update the program so that when a player hits all 10 pins in 2 rolls (a spare) they get the next bowl doubled.
 4. Update the program to handle this: On the final frame there is a possibility to get a third roll if all 10 pins are knocked down within the first two throws.
 5. Add input validation to ensure no more than 10 pins have been knocked down per frame
+6. Update this program so it can read in score sheet notation where strikes are 'X' and spares are '/'. So a game with 3 frames might look like '7/X81' where in the first frame the scored 7 then 3, the second frame all 10 and the third frame 8 then 1
+7. Extend this program so that it can work with any number of pins
+
 
 #### Links
 A basic example of a working program can be found at [hellicott.co.uk](https://www.hellicott.co.uk/)

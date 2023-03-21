@@ -12,7 +12,7 @@ function BowlingScoreCalculator() {
     </div>
       <form onSubmit={handleSubmit}>
         <label>
-          Bowling Score Sheet: (e.g. 10,1,0,9,3,2)
+          Bowling Score List: (e.g. 10,1,5,9,0,2,8,6,2,7,3,4)
           <input name="scoreInput"/>
         </label>
         <button type="submit">Calculate</button>

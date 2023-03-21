@@ -14,7 +14,6 @@ ReactDOM.render(
     <BowlingScoreCalculator />
     <SvgDino />
     <RandomColour />
-    <RandomColour />
     <RockPaperScissors />
   </React.StrictMode>,
   document.getElementById('root')
