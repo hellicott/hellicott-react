@@ -7,10 +7,12 @@ import RandomColour from './projects/randomColour';
 import RockPaperScissors from './projects/rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
 import BowlingScoreCalculator from './projects/bowlingScore';
+import NameGenerator from './projects/nameGenerator';
 
 ReactDOM.render(
   <React.StrictMode>
     <HellicottHeader />
+    <NameGenerator />
     <BowlingScoreCalculator />
     <SvgDino />
     <RandomColour />
