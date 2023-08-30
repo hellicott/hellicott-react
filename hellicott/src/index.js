@@ -8,10 +8,12 @@ import RockPaperScissors from './projects/rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
 import BowlingScoreCalculator from './projects/bowlingScore';
 import NameGenerator from './projects/nameGenerator';
+import MorseCodeTranslator from './projects/morseCode';
 
 ReactDOM.render(
   <React.StrictMode>
     <HellicottHeader />
+    <MorseCodeTranslator />
     <NameGenerator />
     <BowlingScoreCalculator />
     <SvgDino />
