@@ -3,6 +3,16 @@
 Website where I dump any projects I've played with - not necessarily completed or working!
 
 ## Projects
+### Morse Code Translator
+[code here](/hellicott/src/projects/morseCode.js)
+
+A completed code dojo involving translating dots and dashes into text using a binary tree system (rather than a simple dictionary)
+
+### Sprint Name Generator
+[code here](/hellicott/src/projects/nameGenerator.js)
+
+Randomly generate a fun name for a sprint from a large selection of adjectives and animals
+
 ### Bowling Score Calculator
 [code here](/hellicott/src/projects/bowlingScore.js)
 
