@@ -1,11 +1,12 @@
 import '../App.css';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import data from './sprintName.json';
 
 function NameGenerator() {
   const [name, setName] = useState("Click button to generate");
+  const checkbox = useRef();
 
   return (
     <div id="nameGenerator" className="App">            
@@ -16,7 +17,13 @@ function NameGenerator() {
           <p>
             Get a new randomly generated sprint name by clicking the button below
           </p>
-          <button className='subtle-button' onClick={handleSubmit}>Generate name</button>
+            <button className='subtle-button' onClick={handleSubmit}>Generate name</button>
+            <input 
+              type='checkbox'
+              name='alliterate'
+              ref={checkbox}
+            />
+            <label for='alliterate'>Alliterate</label>
           <p>
             <span style={{padding: 8}}>{name}</span>
             <button className='subtle-button tooltip' onClick={copyName}><FontAwesomeIcon icon={faCopy} />
@@ -28,18 +35,46 @@ function NameGenerator() {
     </div>
   );
 
-  function handleSubmit(e) {
+  function handleSubmit(e){
     e.preventDefault();
 
-    let adjectives = data.adjectives;
-    let adjective = adjectives[getRandomInt(adjectives.length)].toLowerCase()
-    console.log(adjective);
+    const alliterate = checkbox.current.checked;
+    console.log("alliterate", alliterate)
 
-    let animals = data.animals;
-    let animal = animals[getRandomInt(animals.length)].toLowerCase()
-    console.log(animal);
+    let newName = getRandomAdjective() + " ";
 
-    setName(adjective + " " + animal)
+    if (alliterate) {
+      newName += getAlliteratedAnimal(newName.charAt(0))
+    } 
+    else {
+      newName += getRandomAnimal()
+    }
+
+    setName(newName)
+
+  }
+
+  function getAlliteratedAnimal(letter){
+    const animals = data.animals;
+    const alliteratingAnimals = animals.filter(x => x.toLowerCase().startsWith(letter.toLowerCase()))
+    const animal = alliteratingAnimals[getRandomInt(alliteratingAnimals.length)].toLowerCase();
+
+    return animal
+  }
+
+  function getRandomAdjective(){
+    const adjectives = data.adjectives;
+    const adjective = adjectives[getRandomInt(adjectives.length)].toLowerCase();
+
+    return adjective;
+
+  }
+
+  function getRandomAnimal(){
+    const animals = data.animals;
+    const animal = animals[getRandomInt(animals.length)].toLowerCase();
+
+    return animal;
 
   }
 
