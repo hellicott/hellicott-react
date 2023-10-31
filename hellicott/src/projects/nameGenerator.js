@@ -23,7 +23,7 @@ function NameGenerator() {
               name='alliterate'
               ref={checkbox}
             />
-            <label for='alliterate'>Alliterate</label>
+            <label htmlFor='alliterate'>Alliterate</label>
           <p>
             <span style={{padding: 8}}>{name}</span>
             <button className='subtle-button tooltip' onClick={copyName}><FontAwesomeIcon icon={faCopy} />
