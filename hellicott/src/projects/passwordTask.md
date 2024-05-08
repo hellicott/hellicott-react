@@ -13,8 +13,8 @@ If there is ambiguity in a requirement you may choose how you interpret and test
 1. the password must contain at least 6 characters
 2. the password must contain a number
 3. the password must contain both uppercase and lower case letters
-4. the password must include an [ISO 3 letter country code](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv)
-5. the digits in the password must add up to at least 26
+4. the digits in the password must add up to at least 26
+5. the password must include an [ISO 3 letter country code](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv)
 6. the password must contain the current time in the format hh:mm
 7. the password must contain the length of the password in [roman numerals](https://romannumerals.guide/chart)
 8. the password must include the current temperature in Celsius
