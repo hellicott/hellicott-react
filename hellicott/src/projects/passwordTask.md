@@ -4,8 +4,8 @@ This task is inspired by the [password game](https://neal.fun/password-game/) in
 
 We're going to make a program which can generate passwords, the requirements for which will get more and more complex.
 
-This task lends itself well to a [TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html) approach where we introduce a new test for each password requirement we add. 
-The generated password should meet each new requirement as well as continuing to meet each previous requirement
+This task lends itself well to a [TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html) approach where we introduce (at least) one new test for each password requirement we add. 
+The generated password should meet each new requirement as well as continuing to meet all the previous requirements
 
 Below is our list of requirements, try to build them in order and one at a time - this helps the tests to be independent. 
 If there is ambiguity in a requirement you may choose how you interpret and test it
@@ -18,3 +18,5 @@ If there is ambiguity in a requirement you may choose how you interpret and test
 6. the password must contain the current time in the format hh:mm
 7. the password must contain the length of the password in [roman numerals](https://romannumerals.guide/chart)
 8. the password must include the current temperature in Celsius
+
+Good luck!
