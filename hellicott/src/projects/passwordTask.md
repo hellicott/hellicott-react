@@ -7,7 +7,7 @@ We're going to make a program which can generate passwords, the requirements for
 This task lends itself well to a [TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html) approach where we introduce (at least) one new test for each password requirement we add. 
 The generated password should meet each new requirement as well as continuing to meet all the previous requirements
 
-Below is our list of requirements, try to build them in order and one at a time - this helps the tests to be independent. 
+Below is our list of requirements, try to build them in order and one at a time.
 If there is ambiguity in a requirement you may choose how you interpret and test it
 
 1. the password must contain at least 6 characters
