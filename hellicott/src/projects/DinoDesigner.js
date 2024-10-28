@@ -4,7 +4,7 @@ import Dino from '../svgs/dino.js';
 import { CompactPicker } from 'react-color';
 
 
-function SvgDino() {
+function DinoDesigner() {
         
     const [body, setBody] = useState({hex: "#5e5e74"});
     const handleBodyChange = (body) => setBody(body);
@@ -45,4 +45,4 @@ function SvgDino() {
 
 }
 
-export default SvgDino;
+export default DinoDesigner;

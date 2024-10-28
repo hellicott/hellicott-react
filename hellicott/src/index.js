@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import HellicottHeader from './components/hellicottHeader';
-import SvgDino from './projects/svgDino';
+import DinoDesigner from './projects/DinoDesigner';
 import RandomColour from './projects/randomColour';
-import RockPaperScissors from './projects/rockPaperScissors';
 import reportWebVitals from './reportWebVitals';
 import BowlingScoreCalculator from './projects/bowlingScore';
 import NameGenerator from './projects/nameGenerator';
 import MorseCodeTranslator from './projects/morseCode';
+import SvgPlayground from './projects/svgPlayground';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,9 +16,9 @@ ReactDOM.render(
     <MorseCodeTranslator />
     <NameGenerator />
     <BowlingScoreCalculator />
-    <SvgDino />
+    <DinoDesigner />
+    <SvgPlayground />
     <RandomColour />
-    <RockPaperScissors />
   </React.StrictMode>,
   document.getElementById('root')
 );

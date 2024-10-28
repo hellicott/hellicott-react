@@ -28,8 +28,24 @@ A project involving manipulating svg attributes in order to design the colours o
 
 Each time you press the button a new random colour is generated and the background is set to this colour. The hex code for the colour can be copied to your clipboard (might not be working :/)
 
-### Rock Paper Scissors
+### [ARCHIVED] Rock Paper Scissors
 [code here](/hellicott/src/projects/rockPaperScissors.js)
 
 A simple game of rock paper scissors where you can select your choice and the opponent is a random generator
 
+# Other info
+
+To run locally:
+```
+git clone "[copied-link]"
+cd hellicott
+npm install
+npm start
+```
+
+To update dependencies:
+```
+npm i -g npm-check-updates
+ncu -u
+npm install
+```
