@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useState } from 'react';
 import { BinaryTree } from '../components/binaryTree.js';
 import ProjectTemplate from '../components/projectTemplate.js';
+import HellicottButton from '../components/Button.js';
 
 const tree = new BinaryTree('root', '')
 tree.insert('e', { dot: true }, 'root');
@@ -63,7 +64,7 @@ function MorseCodeTranslator() {
             Morse Code: 
             <input name="morseInput"/>
           </label>
-          <button type="reset" onClick={handleClear}>Clear</button>
+          <HellicottButton type="reset" onClick={handleClear}>Clear</HellicottButton>
         </form>
         <div className='translationOutput'>
           {translation}
@@ -85,7 +86,7 @@ function MorseCodeTranslator() {
 
   function handleClear(e){
 
-    setTranslation("Translation will appear here")
+    setTranslation("Translation will appear here");
 
   }
 }

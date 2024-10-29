@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import ProjectTemplate from '../components/projectTemplate';
+import HellicottButton from '../components/Button';
 
 
 function RandomColour() {
@@ -15,12 +16,14 @@ function RandomColour() {
           <p>
             Get a new randomly generated colour by clicking the button below
           </p>
-          <button className='subtle-button' style={{color: colour}} onClick={handleSubmit}>New Colour</button>
+          <HellicottButton onClick={handleSubmit}>New Colour</HellicottButton>
           <p>
-            <span style={{padding: 8}}>{colour}</span>
-            <button className='subtle-button tooltip'  style={{color: colour}} onClick={copyHexColour}><FontAwesomeIcon icon={faCopy} />
-            <span className="tooltiptext">copy hex colour to clipboard</span>
-            </button>
+            <HellicottButton onClick={copyHexColour} tooltiptext={"copy hex colour to clipboard"}>
+              <div>
+                {colour}
+                <FontAwesomeIcon icon={faCopy} />
+              </div>
+            </HellicottButton>
           </p>
           
         </div>
@@ -32,11 +35,19 @@ function RandomColour() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-
-    setColour(randomColor);
+    setColour(getRandomColor());
 
   }
+
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var colour = '#';
+    for (var i = 0; i < 6; i++) {
+      colour += letters[Math.floor(Math.random() * 16)];
+    }
+    return colour;
+  }
+  
 
   function copyHexColour() {
 

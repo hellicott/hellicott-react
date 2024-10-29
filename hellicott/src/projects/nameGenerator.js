@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import data from './sprintName.json';
 import ProjectTemplate from '../components/projectTemplate';
+import HellicottButton from '../components/Button';
 
 function NameGenerator() {
   const [name, setName] = useState("Click button to generate");
@@ -17,7 +18,7 @@ function NameGenerator() {
             <p>
               Get a new randomly generated sprint name by clicking the button below
             </p>
-              <button className='subtle-button' onClick={handleSubmit}>Generate name</button>
+              <HellicottButton onClick={handleSubmit}>Generate Name</HellicottButton>
               <input 
                 type='checkbox'
                 name='alliterate'
@@ -25,10 +26,10 @@ function NameGenerator() {
               />
               <label htmlFor='alliterate'>Alliterate</label>
             <p>
-              <span style={{padding: 8}}>{name}</span>
-              <button className='subtle-button tooltip' onClick={copyName}><FontAwesomeIcon icon={faCopy} />
-              <span className="tooltiptext">copy name to clipboard</span>
-              </button>
+              <HellicottButton onClick={copyName} tooltiptext={"copy name to clipboard"}>
+                {name}
+                <FontAwesomeIcon icon={faCopy} />
+              </HellicottButton>
             </p>
             
           </div>
