@@ -1,10 +1,10 @@
-import '../App.css';
+import '../../App.css';
 import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import data from './sprintName.json';
-import ProjectTemplate from '../components/projectTemplate';
-import HellicottButton from '../components/Button';
+import ProjectTemplate from '../../components/projectTemplate';
+import HellicottButton from '../../components/Button';
 
 function NameGenerator() {
   const [name, setName] = useState("Click button to generate");

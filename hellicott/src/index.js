@@ -5,7 +5,7 @@ import HellicottHeader from './components/hellicottHeader';
 import DinoDesigner from './projects/DinoDesigner';
 import RandomColour from './projects/randomColour';
 import reportWebVitals from './reportWebVitals';
-import NameGenerator from './projects/nameGenerator';
+import NameGenerator from './projects/SprintNameGenerator/nameGenerator';
 import MorseCodeTranslator from './projects/morseCode';
 
 ReactDOM.render(
