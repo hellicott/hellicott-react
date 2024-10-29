@@ -1,9 +1,8 @@
 import '../App.css';
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import ProjectTemplate from '../components/projectTemplate';
 import HellicottButton from '../components/Button';
+import CopyToClipboard from '../components/copyTextButton';
 
 
 function RandomColour() {
@@ -18,12 +17,7 @@ function RandomColour() {
           </p>
           <HellicottButton onClick={handleSubmit}>New Colour</HellicottButton>
           <p>
-            <HellicottButton onClick={copyHexColour} tooltiptext={"copy hex colour to clipboard"}>
-              <div>
-                {colour}
-                <FontAwesomeIcon icon={faCopy} />
-              </div>
-            </HellicottButton>
+            <CopyToClipboard text={colour} />
           </p>
           
         </div>
@@ -48,14 +42,6 @@ function RandomColour() {
     return colour;
   }
   
-
-  function copyHexColour() {
-
-    navigator.clipboard.writeText(colour);
-
-  }
 }
-
-
 
 export default RandomColour;

@@ -19,13 +19,10 @@ const Button = styled.button`
       align-items: center;
     }
 
-    & > div {
-      margin: 0px;
+    & > div > * {
+      margin: 0px 3px;
     }
 
-    svg {
-      margin-left: 5px;
-    }
 `
 
 const HellicottButton = ({children, onClick, tooltiptext, type}) => {

@@ -5,6 +5,8 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import data from './sprintName.json';
 import ProjectTemplate from '../../components/projectTemplate';
 import HellicottButton from '../../components/Button';
+import CopyToClipboard from '../../components/copyTextButton';
+
 
 function NameGenerator() {
   const [name, setName] = useState("Click button to generate");
@@ -18,19 +20,15 @@ function NameGenerator() {
             <p>
               Get a new randomly generated sprint name by clicking the button below
             </p>
-              <HellicottButton onClick={handleSubmit}>Generate Name</HellicottButton>
-              <input 
-                type='checkbox'
-                name='alliterate'
-                ref={checkbox}
-              />
-              <label htmlFor='alliterate'>Alliterate</label>
-            <p>
-              <HellicottButton onClick={copyName} tooltiptext={"copy name to clipboard"}>
-                {name}
-                <FontAwesomeIcon icon={faCopy} />
-              </HellicottButton>
-            </p>
+            <HellicottButton onClick={handleSubmit}>Generate Name</HellicottButton>
+            <input 
+              type='checkbox'
+              name='alliterate'
+              ref={checkbox}
+            />
+            <label htmlFor='alliterate'>Alliterate</label>
+
+            <CopyToClipboard text={name} />
             
           </div>
         </ProjectTemplate>
@@ -81,17 +79,11 @@ function NameGenerator() {
 
   }
 
-  function copyName(e) {
-    e.preventDefault();
-    navigator.clipboard.writeText(name);
-  }
-
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
 }
-
 
 
 export default NameGenerator;

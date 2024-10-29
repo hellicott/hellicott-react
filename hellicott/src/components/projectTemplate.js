@@ -8,7 +8,7 @@ const dynamicBgColour = props =>
 
 const ProjectContainer = styled.div`
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
     ${dynamicBgColour};
     & > h1 {

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BinaryTree } from '../components/binaryTree.js';
 import ProjectTemplate from '../components/projectTemplate.js';
 import HellicottButton from '../components/Button.js';
+import CopyToClipboard from '../components/copyTextButton.js';
 
 const tree = new BinaryTree('root', '')
 tree.insert('e', { dot: true }, 'root');
@@ -50,7 +51,7 @@ tree.insert('9', { dot: true }, 'odash')
 tree.insert('0', { dash: true }, 'odash')
 
 function MorseCodeTranslator() {
-  const [translation, setTranslation] = useState("Translation will appear here");
+  const [translation, setTranslation] = useState("Enter morse code to start");
 
   return (
     <div id="morseCodeTranslator" className="App">   
@@ -66,9 +67,7 @@ function MorseCodeTranslator() {
           </label>
           <HellicottButton type="reset" onClick={handleClear}>Clear</HellicottButton>
         </form>
-        <div className='translationOutput'>
-          {translation}
-        </div>
+        <CopyToClipboard text={translation} />
       </div>
     </ProjectTemplate>       
     </div>
@@ -86,7 +85,7 @@ function MorseCodeTranslator() {
 
   function handleClear(e){
 
-    setTranslation("Translation will appear here");
+    setTranslation("Enter morse code to start");
 
   }
 }

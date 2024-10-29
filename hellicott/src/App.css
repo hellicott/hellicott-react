@@ -84,16 +84,6 @@ a:active.subtle-button {
   padding-top: 10px;
 }
 
-.translationOutput {
-  padding: 10px;
-  margin-right: 10%;
-  margin-left: 10%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  outline: double;
-  text-align: left;
-}
-
 /* Tooltip container */
 .tooltip {
   position: relative;
