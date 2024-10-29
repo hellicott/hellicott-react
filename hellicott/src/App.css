@@ -49,12 +49,6 @@ a:active.subtle-button {
 
 }
 
-.project-title {
-  padding: 1px;
-  margin-bottom: 10px;  
-  background-color: rgb(223, 182, 227);
-}
-
 .row {
   display: flex;
   flex-direction: row;

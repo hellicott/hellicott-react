@@ -8,17 +8,15 @@ import reportWebVitals from './reportWebVitals';
 import BowlingScoreCalculator from './projects/bowlingScore';
 import NameGenerator from './projects/nameGenerator';
 import MorseCodeTranslator from './projects/morseCode';
-import SvgPlayground from './projects/svgPlayground';
 
 ReactDOM.render(
   <React.StrictMode>
     <HellicottHeader />
-    <MorseCodeTranslator />
     <NameGenerator />
-    <BowlingScoreCalculator />
-    <DinoDesigner />
-    <SvgPlayground />
     <RandomColour />
+    <DinoDesigner />
+    <MorseCodeTranslator />
+    <BowlingScoreCalculator />
   </React.StrictMode>,
   document.getElementById('root')
 );

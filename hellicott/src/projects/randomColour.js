@@ -2,16 +2,15 @@ import '../App.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
+import ProjectTemplate from '../components/projectTemplate';
 
 
 function RandomColour() {
   const [colour, setColour] = useState("#5e5e74");
 
   return (
-    <div id="colourGenerator" className="App">            
-    <div className='project-title'>
-      <h1>Random Colour Generator</h1>
-    </div>
+    <div id="colourGenerator" className="App">   
+      <ProjectTemplate heading={"Random Colour Generator"} bgColour={colour}>
         <div className='inner-app-section' style={{backgroundColor:colour}}>
           <p>
             Get a new randomly generated colour by clicking the button below
@@ -25,6 +24,8 @@ function RandomColour() {
           </p>
           
         </div>
+      </ProjectTemplate>         
+
     </div>
   );
 

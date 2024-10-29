@@ -3,35 +3,37 @@ import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import data from './sprintName.json';
+import ProjectTemplate from '../components/projectTemplate';
 
 function NameGenerator() {
   const [name, setName] = useState("Click button to generate");
   const checkbox = useRef();
 
   return (
-    <div id="nameGenerator" className="App">            
-    <div className='project-title'>
-      <h1>Sprint Name Generator</h1>
-    </div>
-        <div className='inner-app-section'>
-          <p>
-            Get a new randomly generated sprint name by clicking the button below
-          </p>
-            <button className='subtle-button' onClick={handleSubmit}>Generate name</button>
-            <input 
-              type='checkbox'
-              name='alliterate'
-              ref={checkbox}
-            />
-            <label htmlFor='alliterate'>Alliterate</label>
-          <p>
-            <span style={{padding: 8}}>{name}</span>
-            <button className='subtle-button tooltip' onClick={copyName}><FontAwesomeIcon icon={faCopy} />
-            <span className="tooltiptext">copy name to clipboard</span>
-            </button>
-          </p>
-          
-        </div>
+    <div id="nameGenerator" className="App">   
+      <ProjectTemplate heading={"Sprint Name Generator"} bgColour={'DarkSeaGreen'}>
+      
+          <div className='inner-app-section'>
+            <p>
+              Get a new randomly generated sprint name by clicking the button below
+            </p>
+              <button className='subtle-button' onClick={handleSubmit}>Generate name</button>
+              <input 
+                type='checkbox'
+                name='alliterate'
+                ref={checkbox}
+              />
+              <label htmlFor='alliterate'>Alliterate</label>
+            <p>
+              <span style={{padding: 8}}>{name}</span>
+              <button className='subtle-button tooltip' onClick={copyName}><FontAwesomeIcon icon={faCopy} />
+              <span className="tooltiptext">copy name to clipboard</span>
+              </button>
+            </p>
+            
+          </div>
+        </ProjectTemplate>
+
     </div>
   );
 

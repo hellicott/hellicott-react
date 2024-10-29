@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useState } from 'react';
 import Dino from '../svgs/dino.js';
 import { CompactPicker } from 'react-color';
+import ProjectTemplate from '../components/projectTemplate.js';
 
 
 function DinoDesigner() {
@@ -17,9 +18,7 @@ function DinoDesigner() {
 
     return (
         <div id="svgDino" className="App">
-            <div className='project-title'>
-                <h1>Dino Designer</h1>
-            </div>
+            <ProjectTemplate heading={"Dino Designer"} bgColour={'SeaShell'}>
             <div className="row thin-section" >
                 <div className='column-stack'>
                     <div className="row-stack">
@@ -39,7 +38,8 @@ function DinoDesigner() {
                     <Dino body={body.hex} spikes={spikes.hex} spots={spots.hex} />
                 </div>
             </div>
-            
+            </ProjectTemplate>
+
         </div>
     );
 

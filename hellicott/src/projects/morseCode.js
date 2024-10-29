@@ -1,6 +1,7 @@
 import '../App.css';
 import React, { useState } from 'react';
 import { BinaryTree } from '../components/binaryTree.js';
+import ProjectTemplate from '../components/projectTemplate.js';
 
 const tree = new BinaryTree('root', '')
 tree.insert('e', { dot: true }, 'root');
@@ -51,10 +52,8 @@ function MorseCodeTranslator() {
   const [translation, setTranslation] = useState("Translation will appear here");
 
   return (
-    <div id="morseCodeTranslator" className="App">            
-      <div className='project-title'>
-        <h1>Morse Code Translator</h1>
-      </div>
+    <div id="morseCodeTranslator" className="App">   
+    <ProjectTemplate heading={"Morse Code Translator"} bgColour={"CadetBlue"}>
       <div className='inner-app-section'>
         <p>
           Translate morse code into text
@@ -70,6 +69,7 @@ function MorseCodeTranslator() {
           {translation}
         </div>
       </div>
+    </ProjectTemplate>       
     </div>
   );
 

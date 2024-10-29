@@ -1,15 +1,14 @@
 import '../App.css';
 import React, { useState } from 'react';
+import ProjectTemplate from '../components/projectTemplate';
 
 
 function BowlingScoreCalculator() {
   const [result, setResult] = useState();
 
   return (
-    <div id="colourGenerator" className="App">            
-    <div className='project-title'>
-      <h1>Bowling Score Calculator</h1>
-    </div>
+    <div id="bowlingScore" className="App">
+      <ProjectTemplate heading={"Bowling Score Calculator"} >
       <form onSubmit={handleSubmit}>
         <label>
           Bowling Score List: (e.g. 10,1,5,9,0,2,8,6,2,7,3,4)
@@ -20,6 +19,7 @@ function BowlingScoreCalculator() {
       </form>
         
       Result : {result}
+      </ProjectTemplate>            
     </div>
   );
 
