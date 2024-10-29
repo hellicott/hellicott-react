@@ -1,6 +1,7 @@
 import '../App.css';
 import React, { useState } from 'react';
-import ProjectTemplate from '../components/projectTemplate';
+import ProjectTemplate from '../../components/projectTemplate';
+import HellicottButton from '../../components/Button';
 
 
 function BowlingScoreCalculator() {
@@ -9,16 +10,17 @@ function BowlingScoreCalculator() {
   return (
     <div id="bowlingScore" className="App">
       <ProjectTemplate heading={"Bowling Score Calculator"} >
-      <form onSubmit={handleSubmit}>
-        <label>
-          Bowling Score List: (e.g. 10,1,5,9,0,2,8,6,2,7,3,4)
-          <input name="scoreInput"/>
-        </label>
-        <button type="submit">Calculate</button>
-        <button type="reset">Clear</button>
-      </form>
-        
-      Result : {result}
+        <div>
+          <form onSubmit={handleSubmit}>
+            <label>
+              <p>Bowling Score List: (e.g. 10,1,5,9,0,2,8,6,2,7,3,4)</p>
+              <input name="scoreInput"/>
+            </label>
+            <HellicottButton type="submit">Calculate</HellicottButton>
+            <HellicottButton type="reset">Clear</HellicottButton>
+          </form>
+          <p>Result : {result}</p>
+        </div>
       </ProjectTemplate>            
     </div>
   );
