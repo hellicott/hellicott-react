@@ -1,7 +1,7 @@
 import '../App.css';
 import React, { useState } from 'react';
-import ProjectTemplate from '../../components/projectTemplate';
-import HellicottButton from '../../components/Button';
+import ProjectTemplate from '../../../components/projectTemplate';
+import HellicottButton from '../../../components/Button';
 
 
 function BowlingScoreCalculator() {

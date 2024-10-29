@@ -5,7 +5,6 @@ import HellicottHeader from './components/hellicottHeader';
 import DinoDesigner from './projects/DinoDesigner';
 import RandomColour from './projects/randomColour';
 import reportWebVitals from './reportWebVitals';
-import BowlingScoreCalculator from './projects/bowlingScore';
 import NameGenerator from './projects/nameGenerator';
 import MorseCodeTranslator from './projects/morseCode';
 
@@ -16,7 +15,6 @@ ReactDOM.render(
     <RandomColour />
     <DinoDesigner />
     <MorseCodeTranslator />
-    <BowlingScoreCalculator />
   </React.StrictMode>,
   document.getElementById('root')
 );
