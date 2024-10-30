@@ -1,16 +1,10 @@
 import styled from "@emotion/styled";
-import { css } from '@emotion/react'
-
-const dynamicBgColour = props =>
-  css`
-    background-color: ${(props.bgColour ? props.bgColour : 'grey')};
-  `
 
 const ProjectContainer = styled.div`
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    ${dynamicBgColour};
+    background-color: ${props => props.bgColour};
     & > h1 {
       padding-bottom: 5px;
       margin: 0px 20px;

@@ -7,10 +7,12 @@ import RandomColour from './projects/randomColour';
 import reportWebVitals from './reportWebVitals';
 import NameGenerator from './projects/SprintNameGenerator/nameGenerator';
 import MorseCodeTranslator from './projects/morseCode';
+import TwisterSpinner from './projects/Twister/Twister';
 
 ReactDOM.render(
   <React.StrictMode>
     <HellicottHeader />
+    <TwisterSpinner />
     <NameGenerator />
     <RandomColour />
     <DinoDesigner />
