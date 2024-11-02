@@ -7,7 +7,7 @@ import RandomColour from './projects/randomColour';
 import reportWebVitals from './reportWebVitals';
 import NameGenerator from './projects/SprintNameGenerator/nameGenerator';
 import MorseCodeTranslator from './projects/morseCode';
-import TwisterSpinner from './projects/Twister/Twister';
+import TwisterSpinner from './projects/Twister/TwisterSpinner';
 
 ReactDOM.render(
   <React.StrictMode>
