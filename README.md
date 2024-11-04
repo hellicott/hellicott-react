@@ -3,30 +3,35 @@
 Website where I dump any projects I've played with - not necessarily completed or working!
 
 ## Projects
-### Morse Code Translator
-[code here](/hellicott/src/projects/morseCode.js)
+### Twister Spinner [WIP]
+[code here](/hellicott/src/projects/Twister/TwisterSpinner.js)
 
-A completed code dojo involving translating dots and dashes into text using a binary tree system (rather than a simple dictionary)
+A spinner for the game Twister, using CSS animations and REACT hooks, still a work in progress
 
 ### Sprint Name Generator
 [code here](/hellicott/src/projects/nameGenerator.js)
 
 Randomly generate a fun name for a sprint from a large selection of adjectives and animals
 
-### Bowling Score Calculator
-[code here](/hellicott/src/projects/bowlingScore.js)
+### Random Colour Generator
+[code here](/hellicott/src/projects/randomColour.js)
 
-A task created to be done as a code dojo [instructions here](/hellicott/src/projects/bowlingTask.md) where you can enter a list of pins knowcked down per roll and it will calculate the final score, including doubles from spares and strikes
+Each time you press the button a new random colour is generated and the background is set to this colour. The hex code for the colour can be copied to your clipboard (might not be working :/)
 
 ### Dino Designer
 [code here](/hellicott/src/projects/svgDino.js)
 
 A project involving manipulating svg attributes in order to design the colours of a dinosaur! Colour pickers come from the [react-color](https://www.npmjs.com/package/react-color) package
 
-### Random Colour Generator
-[code here](/hellicott/src/projects/randomColour.js)
+### Morse Code Translator
+[code here](/hellicott/src/projects/morseCode.js)
 
-Each time you press the button a new random colour is generated and the background is set to this colour. The hex code for the colour can be copied to your clipboard (might not be working :/)
+A completed code dojo involving translating dots and dashes into text using a binary tree system (rather than a simple dictionary)
+
+### [ARCHIVED] Bowling Score Calculator
+[code here](/hellicott/src/projects/bowlingScore.js)
+
+A task created to be done as a code dojo [instructions here](/hellicott/src/projects/bowlingTask.md) where you can enter a list of pins knowcked down per roll and it will calculate the final score, including doubles from spares and strikes
 
 ### [ARCHIVED] Rock Paper Scissors
 [code here](/hellicott/src/projects/rockPaperScissors.js)
