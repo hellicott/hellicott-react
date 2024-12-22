@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
-import HellicottButton from "../../components/Button";
+import { faLocationPin, faRotate } from "@fortawesome/free-solid-svg-icons";
 import ProjectTemplate from "../../components/projectTemplate";
 
 const SpinnerContainer = styled.div`
@@ -61,11 +60,24 @@ const LimbSpinner = styled.div`
   justify-items: center;
 
 `
-const LimbLable = styled.div`
+const LimbLabel = styled.div`
 position: absolute;
 width: 200px;
 transform-origin: 100px 100px;
 transform: rotate(${props => props.rotate}deg);
+`
+
+const SpinButton = styled.div`
+position: relative;
+margin: auto;
+border-radius: 50%;
+background-color: black;
+color: white;
+height: 100px;
+width: 100px;
+display: flex;
+align-items: center;
+justify-items: center;
 `
 
 
@@ -82,13 +94,15 @@ const TwisterSpinner = () => {
               </Pointer>
               <Spinner ref={spinnerObject}>
                 <LimbSpinner>
-                  <LimbLable rotate="45">Right Hand</LimbLable>
-                  <LimbLable rotate="135">Left Hand</LimbLable>
-                  <LimbLable rotate="225">Right Foot</LimbLable>
-                  <LimbLable rotate="315">Left Foot</LimbLable>
+                  <LimbLabel rotate="45">Right Hand</LimbLabel>
+                  <LimbLabel rotate="135">Left Hand</LimbLabel>
+                  <LimbLabel rotate="225">Right Foot</LimbLabel>
+                  <LimbLabel rotate="315">Left Foot</LimbLabel>
+                  <SpinButton onClick={handleSubmit}>
+                    <FontAwesomeIcon icon={faRotate} />
+                  </SpinButton>
                 </LimbSpinner>
               </Spinner>
-              <HellicottButton onClick={handleSubmit}>Spin</HellicottButton>
             </SpinnerContainer>
           </div>
         </ProjectTemplate>
