@@ -1,24 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import HellicottHeader from './components/hellicottHeader';
-import DinoDesigner from './projects/DinoDesigner';
-import RandomColour from './projects/randomColour';
+import App from './App';
+import Christmas from './merryXmasDad/christmas';
 import reportWebVitals from './reportWebVitals';
-import NameGenerator from './projects/SprintNameGenerator/nameGenerator';
-import MorseCodeTranslator from './projects/morseCode';
-import TwisterSpinner from './projects/Twister/TwisterSpinner';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
   <React.StrictMode>
-    <HellicottHeader />
-    <TwisterSpinner />
-    <NameGenerator />
-    <RandomColour />
-    <DinoDesigner />
-    <MorseCodeTranslator />
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<App />} />
+        <Route path="/" element={<App />} />
+        <Route path="/merryChristmasDad" element={<Christmas />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
