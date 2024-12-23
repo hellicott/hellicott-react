@@ -52,7 +52,7 @@ const FlipCardContainer = styled.div`
     }
     
 `
-const FlipCard = ({children, title, bgColour, disabled}) => {
+const FlipCard = ({children, title, bgColour, disabled, disabledMessage}) => {
     const [flip, setFlip] = useState(false);
 
     if (disabled) {
@@ -60,6 +60,7 @@ const FlipCard = ({children, title, bgColour, disabled}) => {
             <FlipCardContainer bgColour={bgColour} className={disabled ? "disabled" : ""}>
                 <div className="front">
                     <h1>{title}</h1>
+                    <p>{disabledMessage}</p>
                 </div>
             </FlipCardContainer>
         )
@@ -75,7 +76,7 @@ const FlipCard = ({children, title, bgColour, disabled}) => {
                     <h1>{title}</h1>
                 </div>
                 <div className="back">
-                    <subtitle>{title}</subtitle>
+                    <h3>{title}</h3>
                     {children}
                 </div>
             </FlipCardContainer>

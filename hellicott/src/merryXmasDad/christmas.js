@@ -8,34 +8,33 @@ import data from './challenges.json';
 
 
 const ChristmasContainer = styled.div`
+    font-family: "Courier New";
 `
 
-const Christmas = () => {
-    console.log(data.challenges);
-
-  
+const Christmas = () => {  
     return (
     <div id="dadsCodemas" className="App">
-      <ProjectTemplate heading={'Dad\'s <Code>mas Challenges!'} bgColour={'FireBrick'}>   
         <ChristmasContainer>
-            <Grid container spacing={0.5}>
-                {
-                    data.challenges.map((item) => (
-                        <Grid size={4}>
-                            <FlipCard 
-                                title={item.title} 
-                                bgColour={'DarkSeaGreen'} 
-                                // disabled={isLocked(item.date)}>
-                                disabled={false}>
-                            </FlipCard>
+            <ProjectTemplate heading={'Dad\'s <Code>mas Challenges!'} bgColour={'FireBrick'}>   
+                <Grid container spacing={0.5}>
+                    {
+                        data.challenges.map((item) => (
+                            <Grid size={4}>
+                                <FlipCard 
+                                    title={item.title} 
+                                    bgColour={'DarkSeaGreen'} 
+                                    disabled={isLocked(item.date)}
+                                    disabledMessage={"Unlocks on "+item.date}>
+                                    {/* disabled={false}> */}
+                                        <p>{item.challengeText}</p>
+                                </FlipCard>
 
-                        </Grid>
-                    ))
-                }
-            </Grid>
-
+                            </Grid>
+                        ))
+                    }
+                </Grid>
+            </ProjectTemplate>
         </ChristmasContainer>
-      </ProjectTemplate>
     </div>
     )
 

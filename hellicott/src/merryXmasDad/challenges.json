@@ -3,13 +3,39 @@
     [
         {
             "title": "Day 1",
-            "date": "2024-12-25",
+            "date": "2024-12-23",
             "challengeText" : "Your challenge is..."
         },
         {
             "title": "Day 2",
             "date": "2024-12-26",
             "challengeText" : "Your challenge is..."
+        },
+        {
+            "title": "Day 3",
+            "date": "2024-12-27",
+            "challengeText" : "Your challenge is..."
+        },
+        {
+            "title": "Day 4",
+            "date": "2024-12-28",
+            "challengeText" : "Your challenge is..."
+        },
+        {
+            "title": "Day 5",
+            "date": "2024-12-29",
+            "challengeText" : "Your challenge is..."
+        },
+        {
+            "title": "Day 6",
+            "date": "2024-12-30",
+            "challengeText" : "Your challenge is..."
+        },
+        {
+            "title": "Day 7",
+            "date": "2024-12-31",
+            "challengeText" : "Your challenge is..."
         }
+        
     ]
 }
