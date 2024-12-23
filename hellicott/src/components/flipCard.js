@@ -25,6 +25,16 @@ const FlipCardContainer = styled.div`
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
         opacity: 1;
     }
+
+    &.disabled {
+        opacity: 0.8;
+        cursor: not-allowed;
+    }
+
+    &.disabled:hover {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+
     
     & > .front, .back {
         position: absolute;
@@ -42,24 +52,36 @@ const FlipCardContainer = styled.div`
     }
     
 `
-const FlipCard = ({children, title, bgColour}) => {
+const FlipCard = ({children, title, bgColour, disabled}) => {
     const [flip, setFlip] = useState(false);
 
-    return (
-        <FlipCardContainer 
-            className={flip ? "flip" : ""} 
-            onClick={() => setFlip(!flip)} 
-            bgColour={bgColour}
-        >
-            <div className="front">
-                <h1>{title}</h1>
-            </div>
-            <div className="back">
-                <subtitle>{title}</subtitle>
-                {children}
-            </div>
-        </FlipCardContainer>
-    )
+    if (disabled) {
+        return (
+            <FlipCardContainer bgColour={bgColour} className={disabled ? "disabled" : ""}>
+                <div className="front">
+                    <h1>{title}</h1>
+                </div>
+            </FlipCardContainer>
+        )
+    }
+    else {
+        return (
+            <FlipCardContainer 
+                className={flip ? "flip" : ""} 
+                onClick={() => setFlip(!flip)} 
+                bgColour={bgColour}
+            >
+                <div className="front">
+                    <h1>{title}</h1>
+                </div>
+                <div className="back">
+                    <subtitle>{title}</subtitle>
+                    {children}
+                </div>
+            </FlipCardContainer>
+        )
+    }
+
 };
 
 export default FlipCard;
