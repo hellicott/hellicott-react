@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Christmas from './merryXmasDad/christmas';
+import Christmas from './merryXmasDad';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route path="*" element={<App />} />
         <Route path="/" element={<App />} />
-        <Route path="/merryChristmasDad" element={<Christmas />} />
+        <Route path="/merryXmasDad" element={<Christmas />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
