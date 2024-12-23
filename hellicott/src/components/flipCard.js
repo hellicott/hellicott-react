@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import React, { useState } from 'react';
 
-
 const FlipCardContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -9,12 +8,11 @@ const FlipCardContainer = styled.div`
     align-items: center;
     position: relative;
     border-radius: 0.35rem;
-    background-color: rgba(245,245,245,0.95);
+    background-color: ${props => props.bgColour};
     transform-style: preserve-3d;
-    transition: 150ms;
+    transition: 350ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
-    width: 300px;
     height: 300px;
     margin: 10px;
     
@@ -32,6 +30,7 @@ const FlipCardContainer = styled.div`
         position: absolute;
         padding: 1rem;
         backface-visibility: hidden;
+        width: -webkit-fill-available;
     }
     
     & > .front {
@@ -43,16 +42,21 @@ const FlipCardContainer = styled.div`
     }
     
 `
-const FlipCard = () => {
+const FlipCard = ({children, title, bgColour}) => {
     const [flip, setFlip] = useState(false);
 
     return (
-        <FlipCardContainer className={flip ? "flip" : ""}>
-            <div className="front" onClick={() => setFlip(!flip)}>
-                <h1>Click Me</h1>
+        <FlipCardContainer 
+            className={flip ? "flip" : ""} 
+            onClick={() => setFlip(!flip)} 
+            bgColour={bgColour}
+        >
+            <div className="front">
+                <h1>{title}</h1>
             </div>
-            <div className="back" onClick={() => setFlip(!flip)}>
-                <h1>Hello!</h1>
+            <div className="back">
+                <subtitle>{title}</subtitle>
+                {children}
             </div>
         </FlipCardContainer>
     )
