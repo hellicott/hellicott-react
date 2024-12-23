@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Christmas from './merryXmasDad';
+import Christmas from './merryXmasDad/christmas';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
