@@ -19,7 +19,7 @@ const Christmas = () => {
                 <Grid container spacing={0.5}>
                     {
                         data.challenges.map((item) => (
-                            <Grid size={4}>
+                            <Grid size={3}>
                                 <FlipCard 
                                     title={item.title} 
                                     bgColour={'DarkSeaGreen'} 
