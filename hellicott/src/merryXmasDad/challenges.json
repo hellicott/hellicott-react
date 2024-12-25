@@ -4,27 +4,29 @@
         {
             "title": "Day 1",
             "date": "2024-12-25",
-            "challengeText" : "Your challenge is..."
+            "challengeText" : "Merry <Code>mas! I've devised some programming challenges and ideas just for you! I would love your program to be more festive, can you add customisable themes so I can make all the buttons red and green for Christmas?"
         },
         {
             "title": "Day 2",
             "date": "2024-12-26",
-            "challengeText" : "Your challenge is..."
+            "challengeText" : "I'm curious whether Wordle would be more difficult with 6 letter words or 3 letter words, could you build a version that would let me try them out?"
         },
         {
             "title": "Day 3",
             "date": "2024-12-27",
-            "challengeText" : "Your challenge is..."
+            "challengeText" : "I've found this website of interesting challenges. Choose one for us both to do, then we can compare how we did it. Maybe even make it into a blog post?",
+            "link": "https://projecteuler.net/recent",
+            "linkText" : "ProjectEuler"
         },
         {
             "title": "Day 4",
             "date": "2024-12-28",
-            "challengeText" : "Your challenge is..."
+            "challengeText" : "When I'm looking after the chickens you still need your Eggio data! How about adding a tool to your website where I could log what eggs I find? You could review it before it goes into the database."
         },
         {
             "title": "Day 5",
             "date": "2024-12-29",
-            "challengeText" : "Your challenge is..."
+            "challengeText" : ""
         },
         {
             "title": "Day 6",

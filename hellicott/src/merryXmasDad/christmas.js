@@ -24,11 +24,11 @@ const Christmas = () => {
                                     title={item.title} 
                                     bgColour={'DarkSeaGreen'} 
                                     disabled={isLocked(item.date)}
+                                    // disabled={false}
                                     disabledMessage={"Unlocks on "+item.date}>
-                                    {/* disabled={false}> */}
                                         <p>{item.challengeText}</p>
+                                        <a target="_blank" href={item.link}>{item.linkText}</a>
                                 </FlipCard>
-
                             </Grid>
                         ))
                     }
