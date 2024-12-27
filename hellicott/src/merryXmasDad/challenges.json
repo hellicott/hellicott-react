@@ -21,17 +21,21 @@
         {
             "title": "Day 4",
             "date": "2024-12-28",
-            "challengeText" : "When I'm looking after the chickens you still need your Eggio data! How about adding a tool to your website where I could log what eggs I find? You could review it before it goes into the database."
+            "challengeText" : "When I'm looking after the chickens you still need your Eggio data! How about adding a tool to your website where I could log what eggs I find? You could hide it behind a password so you don't get fake entries"
         },
         {
             "title": "Day 5",
             "date": "2024-12-29",
-            "challengeText" : ""
+            "challengeText" : "Maybe you can combine your coding and table tennis skills somehow. Either for a scoring system or, more interestingly, for spin calculations.",
+            "link": "http://sonic.net/~goddard/home/spin/docs/spin.html",
+            "linkText" : "Here's some inspiration"
         },
         {
             "title": "Day 6",
             "date": "2024-12-30",
-            "challengeText" : "Your challenge is..."
+            "challengeText" : "There are many cool APIs available publicly, find one that interests you to make a new feature for your website!",
+            "link": "https://github.com/public-apis/public-apis?tab=readme-ov-file#weather",
+            "linkText" : "Maybe yet another temperature device? :D"
         },
         {
             "title": "Day 7",
