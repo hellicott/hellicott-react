@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import FlipCard from "../components/flipCard";
 import ProjectTemplate from "../components/projectTemplate";
 import Grid from '@mui/material/Grid2';
@@ -12,6 +12,15 @@ const ChristmasContainer = styled.div`
 `
 
 const Christmas = () => {  
+
+    const [jokeStart, setJokeStart] = useState('');
+    const [jokePunch, setJokePunch] = useState('');
+
+
+    useEffect(()=>{
+        getDadJoke();
+    }, [])
+
     return (
     <div id="dadsCodemas" className="App">
         <ChristmasContainer>
@@ -32,6 +41,11 @@ const Christmas = () => {
                             </Grid>
                         ))
                     }
+                    <Grid size={3}>
+                        <FlipCard title={jokeStart} bgColour={'green'} disabled={false}>
+                            <p>{jokePunch}</p>
+                        </FlipCard>
+                    </Grid>
                 </Grid>
             </ProjectTemplate>
         </ChristmasContainer>
@@ -43,6 +57,15 @@ const Christmas = () => {
         const unlockDate = Date.parse(itemDate)
         return today < unlockDate;
 
+    }
+
+    async function getDadJoke(){
+        const apiUrl = 'https://official-joke-api.appspot.com/jokes/programming/random';
+        const response = await fetch(apiUrl);
+        const myJson = await response.json();
+        setJokeStart(myJson[0].setup);
+        setJokePunch(myJson[0].punchline);
+        console.log(myJson[0].id);
     }
 
 }
