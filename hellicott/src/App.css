@@ -41,12 +41,10 @@ a.subtle-button {
 a:hover.subtle-button {
   background-color: rgb(62, 62, 62);
   color: white;
-
 }
 
 a:active.subtle-button {
   background-color: rgb(153, 153, 153);
-
 }
 
 .row {
@@ -84,6 +82,13 @@ a:active.subtle-button {
   padding-top: 10px;
 }
 
+.dino-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  margin-right: 23.5em;
+}
+
 /* Tooltip container */
 .tooltip {
   position: relative;
@@ -99,18 +104,17 @@ a:active.subtle-button {
   font-size: small;
   padding: 5px;
   border-radius: 6px;
-  
+
   position: absolute;
   z-index: -1;
   width: 70px;
   top: 110%;
   left: 50%;
   margin-left: -40px;
- 
 }
 
 .tooltip .tooltiptext::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   bottom: 100%;
   left: 50%;
