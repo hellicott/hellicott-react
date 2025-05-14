@@ -8,7 +8,7 @@ const IconButton = (props) => {
     <div>
         <a className='subtle-button tooltip'  target="_blank" rel="noreferrer" href={props.link}>
             <FontAwesomeIcon height="2em" icon={props.faIcon} />
-            <span className="tooltiptext">source code</span> 
+            <span className="tooltiptext">{props.tooltip}</span> 
         </a>
    
     </div>

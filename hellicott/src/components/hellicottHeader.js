@@ -17,7 +17,7 @@ const HellicottHeader = (props) => {
         <h1>Hellicott</h1>
       </div>
       <div className="header-icons">
-        <IconButton faIcon={faFileCode} link="https://github.com/hellicott/hellicott-react" />
+        <IconButton faIcon={faFileCode} link="https://github.com/hellicott/hellicott-react" tooltip="source code" />
       </div>
     </div>
     
