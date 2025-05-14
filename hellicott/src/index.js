@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import Christmas from './merryXmasDad/christmas';
 import reportWebVitals from './reportWebVitals';
+import Countdown from './countdown/countdown';
+import CreateCountdown from './countdown/createCountdown';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,6 +17,8 @@ root.render(
         <Route path="*" element={<App />} />
         <Route path="/" element={<App />} />
         <Route path="/merryXmasDad" element={<Christmas />} />
+        <Route path="/countdown/:timestamp" element={<Countdown />} />
+        <Route path="/countdown" element={<CreateCountdown />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
